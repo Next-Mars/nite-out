@@ -4,7 +4,7 @@
 // which handle password checking for existing users and
 // hashing when registering new users.
 var db = require('../config/db.js');
-var bcrypt = require('bcrypt');
+// var bcrypt = require('bcrypt');
 
 var User = db.Model.extend({
   // Define the table to which the model belongs to (for Schema)
@@ -20,9 +20,10 @@ var User = db.Model.extend({
   },
 
   comparePassword: function(attemptedPassword, callback) {
-    bcrypt.compare(attemptedPassword, this.get('password'), function(err, isMatch) {
-      callback(isMatch);
-    });
+    // bcrypt.compare(attemptedPassword, this.get('password'), function(err, isMatch) {
+    //   callback(isMatch);
+    // });
+    callback(isMatch);
   },
 
   // This function handles generating a salt and saving the hashed
