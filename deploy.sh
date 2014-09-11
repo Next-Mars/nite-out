@@ -85,6 +85,10 @@ exitWithMessageOnError "Kudu Sync failed"
 fi
 # 2. Select node version
 selectNodeVersion
+#3. install g++
+eval apt-get -y install g++
+exitWithMessageOnError "What are you trying to do?"
+
 # 3. Install npm packages
 if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
 cd "$DEPLOYMENT_TARGET"
