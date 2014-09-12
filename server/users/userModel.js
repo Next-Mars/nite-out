@@ -4,7 +4,7 @@
 // which handle password checking for existing users and
 // hashing when registering new users.
 var db = require('../config/db.js');
-var bcrypt = require('bcryptjs');
+var bcrypt = require('bcrypt-nodejs');
 
 var User = db.Model.extend({
   // Define the table to which the model belongs to (for Schema)
